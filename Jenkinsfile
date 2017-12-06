@@ -6,7 +6,8 @@ node {
     stage ('Checkout'){
         echo 'Checkout'
 		
-		echo bat(returnStdout: true, script: 'env')
+		env.each{ println it } 
+		//echo bat(returnStdout: true, script: 'env')
 		//echo  "${GIT_COMMIT}"
 		//echo  "${GIT_URL}"
 		//echo  "${GIT_BRANCH}"
