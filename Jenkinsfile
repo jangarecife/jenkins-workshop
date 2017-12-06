@@ -5,7 +5,8 @@ import org.skat.*
 node {
     stage ('Checkout'){
         echo 'Checkout'
-		echo  ${env.GIT_BRANCH}
+		echo  '${env.GIT_BRANCH}'
+		echo  "${env.GIT_BRANCH}"
 		//def zot = new org.skat.Zot()
 		//zot.checkOut('jangarecife/Ateam.git')
 
