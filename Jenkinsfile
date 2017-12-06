@@ -4,6 +4,7 @@ import org.skat.*
 
 node {
     stage ('Checkout'){
+		cleanWs()
         echo 'Checkout'
 		
 		//echo bat(returnStdout: true, script: 'env')
