@@ -8,11 +8,12 @@ node {
 		
 		//echo bat(returnStdout: true, script: 'env')
 		echo  "${env.BUILD_NUMBER}"
-		bat 'env > env.txt'
-		env.each{ println it.P} 
-		//echo  "${GIT_URL}"
-		//echo  "${GIT_BRANCH}"
-		//echo  "${GIT_LOCAL_BRANCH}"
+		echo  "${env.BRANCH_NAME}"
+		if("master".equals("${env.BRANCH_NAME}"))
+			echo 'Branch master + "${env.BUILD_NUMBER}"
+		else
+			echo "Branch " + "${env.BRANCH_NAME} - ${env.BUILD_NUMBER}"
+		
 		//def zot = new org.skat.Zot()
 		//zot.checkOut('jangarecife/Ateam.git')
 
