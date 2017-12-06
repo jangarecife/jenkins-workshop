@@ -1,3 +1,9 @@
+@Library(workshop) _
+import org.skat.*
+
+def sc = new org.skat.SharedClass()
+sc.checkOut('jangarecife/jenkins-workshop.git')
+
 node {
     stage ('Checkout'){
         echo 'Checkout'
