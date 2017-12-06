@@ -1,8 +1,8 @@
 @Library('workshop') _
 import org.skat.*
 
-def sc = new org.skat.SharedClass()
-sc.checkOut('jangarecife/jenkins-workshop.git')
+def zot = new org.skat.Zot()
+zot.checkOut('jangarecife/jenkins-workshop.git')
 
 node {
     stage ('Checkout'){
