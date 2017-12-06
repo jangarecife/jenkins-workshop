@@ -6,9 +6,10 @@ node {
     stage ('Checkout'){
         echo 'Checkout'
 		
-		env.each{ println it } 
 		//echo bat(returnStdout: true, script: 'env')
-		//echo  "${GIT_COMMIT}"
+		echo  "${env.BUILD_NUMBER}"
+		bat 'env > env.txt'
+		env.each{ println it.P} 
 		//echo  "${GIT_URL}"
 		//echo  "${GIT_BRANCH}"
 		//echo  "${GIT_LOCAL_BRANCH}"
