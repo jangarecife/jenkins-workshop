@@ -5,10 +5,12 @@ import org.skat.*
 node {
     stage ('Checkout'){
         echo 'Checkout'
-		echo  "${GIT_COMMIT}"
-		echo  "${GIT_URL}"
-		echo  "${GIT_BRANCH}"
-		echo  "${GIT_LOCAL_BRANCH}"
+		
+		echo sh(returnStdout: true, script: 'env')
+		//echo  "${GIT_COMMIT}"
+		//echo  "${GIT_URL}"
+		//echo  "${GIT_BRANCH}"
+		//echo  "${GIT_LOCAL_BRANCH}"
 		//def zot = new org.skat.Zot()
 		//zot.checkOut('jangarecife/Ateam.git')
 
