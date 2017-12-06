@@ -10,7 +10,7 @@ node {
 		echo  "${env.BUILD_NUMBER}"
 		echo  "${env.BRANCH_NAME}"
 		if("master".equals("${env.BRANCH_NAME}"))
-			echo 'Branch master + "${env.BUILD_NUMBER}"
+			echo 'Branch master' + "${env.BUILD_NUMBER}"
 		else
 			echo "Branch " + "${env.BRANCH_NAME} - ${env.BUILD_NUMBER}"
 		
