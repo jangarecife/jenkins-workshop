@@ -12,7 +12,7 @@ node {
             echo 'Start'
             def out = sh script: 'mvn clean package', returnStdout:true
             echo "$out"
-            echo 'Slut'
+            echo 'Slut...'
         }
     }
     stage ('javadoc'){
