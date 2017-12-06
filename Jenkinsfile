@@ -1,4 +1,4 @@
-@Library(workshop) _
+@Library('workshop') _
 import org.skat.*
 
 def sc = new org.skat.SharedClass()
